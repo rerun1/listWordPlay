@@ -26,7 +26,7 @@ All previous objectives have been met.
 ## Current Screenshot for Reference
 <br>
 
-![alt text](https://raw.githubusercontent.com/rerun1/iceCreamFlavors/master/img/screenShot8-9-19.png)
+![alt text](https://raw.githubusercontent.com/rerun1/listWordPlay/master/img/screenShot8-12-19.png)
 <br>
 <br>
 
