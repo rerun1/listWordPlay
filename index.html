@@ -20,37 +20,8 @@
       <div class="row justify-content-center">
         <div class="col-8 formBackground ">
           <form id="items">
-            <h2>Enter items you need from the store we will help to develop an organized list...</h2>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text tisaBold">1</span>
-              </div>
-              <input id="item1" type="text" class="form-control" aria-label="item number 1">
-            </div>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text tisaBold">2</span>
-              </div>
-              <input id="item2" type="text" class="form-control" aria-label="item number 2">
-            </div>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text tisaBold">3</span>
-              </div>
-              <input id="item3" type="text" class="form-control" aria-label="item number 3">
-            </div>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text tisaBold">4</span>
-              </div>
-              <input id="item4" type="text" class="form-control" aria-label="item number 4">
-            </div>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text tisaBold">5</span>
-              </div>
-              <input id="item5" type="text" class="form-control" aria-label="item number 5">
-            </div>
+            <h2>Enter items you need from the store, separated by commas, and we will help to develop an organized list...</h2>
+            <textarea id="sentence" rows="3"></textarea>
             <div class="row justify-content-center">
               <div class="col-4">
                 <button type="submit" class="btn">Make your list...</button>
@@ -62,8 +33,11 @@
       <div class="row justify-content-center">
         <div  class="col-8 formBackground">
           <div class="row justify-content-center">
-            <div id="userList" class="col-3">
-              <ol></ol>
+            <div id="userSentenceIntro" class="col-8">
+              <h2>Here is your list as a sentence without the two- and one-letter items, because we thought those might be a mistake</h2>
+              <ul id="userSentence"></ul>
+              <h2>But, if that isn't right, here is the list in alpha order including the two-letter items:</h2>
+              <ul id="userList"></ul>
             </div>
           </div>
         </div>

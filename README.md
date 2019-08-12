@@ -4,10 +4,10 @@
 <br>
 
 ## Description
-Website with form that allows a user to input items they need at the store.
-When the user submits the form, the form is hidden a list of items in alphabetical order, all uppercased, is displayed.
+Website with a form where users may enter a sentence. Used the previous project, shopping list, and substituted a text area input area for the text input in forms.
 
-Hint: To do this, build an array of the inputted items. (Make sure you don't include any blank fields.) Sort the array in alphabetical order. Make a new array with each entry uppercased (don't just uppercase them when you display them). Then, display the sorted list of things as list items inside a <ul>.
+Turn that sentence into an array using the split method then loop through this array to build a new array out of every word in the sentence that is 3 or more characters in length.
+Finally, reverse the order of the new array, join it back together into a string, and display it to the user.
 
 <br>
 

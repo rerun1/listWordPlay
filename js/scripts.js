@@ -1,64 +1,39 @@
-var items = ["item1", "item2", "item3", "item4", "item5"];
-
+// var userSentence = "";
+// var userSentenceArray = [];
 
 $(document).ready(function(){
+
+$("div#userSentence").empty();
+
   $("form#items").submit(function(event){
     event.preventDefault();
 
-    $("ol").empty();
-    $("form#items").hide();
-    $("div#userList").show();
+    $("div#userSentenceIntro").show();
 
-    var userItems = items.map(function(item){
-      var userItem = $("input#" + item).val();
-      return userItem.toUpperCase();
+    var userWords = $("textarea#sentence").val().split(", ").sort();
+
+    var userWordsStrip = userWords.map(function(word){
+      return word.trim(this);
     });
 
-    userItems.sort();
+    console.log(userWordsStrip);
 
-    userItems.forEach(function(item){
-       $("ol").append("<li>" + item + "</li>");
+    var threeCharacterWords = userWordsStrip.filter(word => word.length >= 3);
+
+    console.log(threeCharacterWords);
+
+    threeCharacterWords.reverse();
+
+    var sentenceAlter = threeCharacterWords.join(" ");
+
+    console.log(sentenceAlter);
+
+    $("ul#userSentence").append("<li><i>" + sentenceAlter + "</i></li>");
+
+    userWords.forEach(function(word){
+      $("ul#userList").append("<li>" + word + "</li>");
     });
 
   });
 
 });
-
-
-
-//
-//
-// var items = ["item1", "item2", "item3", "item4", "item5"];
-// var userItems = [];
-//
-// var itemListSort = function(){
-//
-//   items.forEach(function(item){
-//     var upperCaseItem = $("input#" + item).val().toUpperCase();
-//     userItems.push(upperCaseItem);
-//   });
-//
-//   userItems.sort();
-//
-//   return userItems
-//
-// };
-//
-// $(document).ready(function(){
-//
-//  $("form#items").submit(function(event){
-//    event.preventDefault();
-//
-//   $("ol").empty();
-//   $("form#items").hide();
-//   $("div#userList").show();
-//
-//   itemListSort();
-//
-//   userItems.forEach(function(item){
-//      $("ol").append("<li>" + item + "</li>");
-//   });
-//
-//  });
-//
-// });
