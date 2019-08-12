@@ -1,5 +1,5 @@
-// var userSentence = "";
-// var userSentenceArray = [];
+
+
 
 $(document).ready(function(){
 
@@ -10,17 +10,13 @@ $("div#userSentence").empty();
 
     $("div#userSentenceIntro").show();
 
-    var userWords = $("textarea#sentence").val().split(", ").sort();
+    var userWords = $("textarea#sentence").val().split(", ");
 
     var userWordsStrip = userWords.map(function(word){
       return word.trim(this);
     });
 
-    console.log(userWordsStrip);
-
     var threeCharacterWords = userWordsStrip.filter(word => word.length >= 3);
-
-    console.log(threeCharacterWords);
 
     threeCharacterWords.reverse();
 
@@ -29,6 +25,8 @@ $("div#userSentence").empty();
     console.log(sentenceAlter);
 
     $("ul#userSentence").append("<li><i>" + sentenceAlter + "</i></li>");
+
+    userWords.sort();
 
     userWords.forEach(function(word){
       $("ul#userList").append("<li>" + word + "</li>");
