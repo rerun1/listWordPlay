@@ -6,20 +6,19 @@
 ## Description
 Website with a form where users may enter a sentence. Used the previous project, shopping list, and substituted a text area input area for the text input in forms.
 
-Turn that sentence into an array using the split method then loop through this array to build a new array out of every word in the sentence that is 3 or more characters in length.
-Finally, reverse the order of the new array, join it back together into a string, and display it to the user.
+Practice turning that sentence into an array using the split method then loop through this array to build a new array out of every word in the sentence that is 3 or more characters in length. Finally, reverse the order of the new array, join it back together into a string, and display it to the user.
 
 <br>
 
 ## Objectives
-- [] JavaScript business logic and user interface logic are separate.
-- [] Variable names are descriptive and use lower camel case (e.g. myVariableExample).
-- [] Code is clean, well-refactored, and easy-to-read. This includes correct indendation, spacing, and including only necessary comments and debugging tools.
-- [ ] Application implements a for loop and works as expected.
+- [x] JavaScript business logic and user interface logic are separate.
+- [x] Variable names are descriptive and use lower camel case (e.g. myVariableExample).
+- [x] Code is clean, well-refactored, and easy-to-read. This includes correct indendation, spacing, and including only necessary comments and debugging tools.
+- [x] Application implements a for loop and works as expected.
 All previous objectives have been met.
-- [ ] Project is broken down into "plain English" specs, listed in README.
-- [] Project is in a presentable, portfolio-quality state.
-- [] Practice styling with imagery and fonts
+- [x] Project is broken down into "plain English" specs, listed in README.
+- [x] Project is in a presentable, portfolio-quality state.
+- [x] Practice styling with imagery and fonts
 
 <br>
 

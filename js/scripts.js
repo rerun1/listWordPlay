@@ -1,8 +1,10 @@
 var userWords = [];
+var userWordsTrimWords = [];
+var threeCharacterOrMoreWords =[];
 
 $(document).ready(function(){
 
-$("div#userSentence").empty();
+  $("div#userSentence").empty();
 
   $("form#items").submit(function(event){
     event.preventDefault();
@@ -11,17 +13,15 @@ $("div#userSentence").empty();
 
     userWords = $("textarea#sentence").val().split(", ");
 
-    var userWordsStrip = userWords.map(function(word){
+    userWordsTrimWords = userWords.map(function(word){
       return word.trim(this);
     });
 
+    threeCharacterOrMoreWords = userWordsTrimWords.filter(word => word.length >= 3);
 
-    var threeCharacterWords = userWordsStrip.filter(word => word.length >= 3);
+    threeCharacterOrMoreWords.reverse();
 
-
-    threeCharacterWords.reverse();
-
-    var sentenceAlter = threeCharacterWords.join(" ");
+    var sentenceAlter = threeCharacterOrMoreWords.join(" ");
 
 
     $("ul#userSentence").append("<li><i>" + sentenceAlter + "</i></li>");
